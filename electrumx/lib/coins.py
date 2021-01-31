@@ -3856,3 +3856,20 @@ class Quebecoin(AuxPowMixin, Coin):
     TX_PER_BLOCK = 20
     REORG_LIMIT = 2000
     RPC_PORT = 10890
+
+    class Tribe(Coin):
+    NAME = "Tribe"
+    SHORTNAME = "TRB"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("02fda926")
+    XPRV_VERBYTES = bytes.fromhex("02fda4ea")
+    P2PKH_VERBYTE = bytes.fromhex("46")
+    P2SH_VERBYTES = (bytes.fromhex("84"),)
+    WIF_BYTE = bytes.fromhex("C6")
+    DESERIALIZER = lib_tx.DeserializerTxTime
+    GENESIS_HASH = ('00000a55dce11803cfa87cfab4498cba'
+                    '41ffe2acca8e3cda2b48e633c69fd84c')
+    TX_COUNT = 606935
+    TX_COUNT_HEIGHT = 614951
+    TX_PER_BLOCK = 1
+    RPC_PORT = 9399
